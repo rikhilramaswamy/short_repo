@@ -1,10 +1,20 @@
-# main_app.py - Original Version
+# main_app.py - Changed Version
 
-import os
+# No more os import needed
 
 def greet(name):
     """Greets a user."""
-    print(f"Hello, {name}!")
+    print(f"Hola, {name}!") # Changed greeting
+    
+def calculate_sum(a, b):
+    """Calculates the sum of two numbers."""
+    try:
+        return a + b
+    except Exception as e: # Broad exception
+        print(f"Error calculating sum: {e}")
+        return 0
 
 if __name__ == "__main__":
-    greet("World")
+    greet("Mundo")
+    total = calculate_sum(10, 20)
+    print(f"Total: {total}")
